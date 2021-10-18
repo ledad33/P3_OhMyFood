@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/shrikhand/v6/a8IbNovtLWfR7T7bMJwrGIKR4zg.woff2) format("woff2");
+  unicode-range: U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9, U+25CC, U+A830-A839;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/shrikhand/v6/a8IbNovtLWfR7T7bMJwrDYKR4zg.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/shrikhand/v6/a8IbNovtLWfR7T7bMJwrA4KR.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+  }
+  
+  h1 {
+    font-size: 2.4em;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  .header {
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    position: relative;
+    height: 60px;
+    z-index: 1000;
+    box-sizing: border-box;
+    height: 90px;
+  }
+  .header_logo {
+    font-family: 'Shrikhand';
+    margin: 20px;
+    text-align: center;
+  }
+  .header__arrow {
+    position: absolute;
+    top: 33px;
+    left: 45px;
+  }
+  footer {
+    background-color: #353535;
+    padding-bottom: 16px;
+  }
+  footer ul {
+    padding-left: 25px;
+    list-style: none;
+  }
+  footer ul li {
+    margin-bottom: 5px;
+  }
+  footer ul li:nth-child(1) i {
+    margin-right: 18px;
+  }
+  footer ul i {
+    color: #fff;
+    margin-right: 10px;
+  }
+  footer a {
+    color: #fff;
+  }
+  
+  .logo {
+    font-family: "Shrikhand";
+    color: #fff;
+    margin: 0 0 -10px 25px;
+    padding-top: 15px;
+  }
+  
+  .background__photo {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .menu {
+    margin-top: -50px;
+    border-radius: 50px 50px 0 0;
+    background-color: #f2f2f2;
+    width: 95%;
+    padding: 2.5% 2.5%;
+    position: relative;
+    z-index: 2;
+  }
+  .menu__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  .menu__titre {
+    font-family: "Shrikhand";
+    font-size: 2.3em;
+  }
+  .menu__categorie {
+    height: 40px;
+    font-weight: normal;
+    width: 54px;
+    border-bottom: 3px solid #99e2d0;
+    margin-bottom: 10px;
+  }
+  
+  .plat {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 15px 10px;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    animation: itemAppear 0.6s;
+    animation-timing-function: cubic-bezier(0.83, 1.66, 0.55, 0.44);
+    animation-fill-mode: both;
+    transform: scale(0);
+  }
+  .plat a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    position: relative;
+  }
+  .plat a:hover .plat__checks--rot {
+    transform: rotate(-1turn);
+  }
+  .plat a:hover .plat__checks--slidein {
+    width: 80px;
+  }
+  .plat__statique {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    z-index: 3;
+    padding: 0 15px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .plat__statique__descriptions {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .plat__statique__descriptions p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .plat__statique__descriptions h3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .plat__statique__prix {
+    margin-top: 30px;
+  }
+  .plat__statique p {
+    margin-top: -10px;
+  }
+  .plat__checks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    color: #fff;
+    font-size: 2em;
+    width: 0px;
+    height: 80px;
+    transition: width 1s ease-in-out;
+  }
+  .plat__checks--rot {
+    transition: transform 500ms 150ms ease-in-out;
+  }
+  
+  .delay-1 {
+    animation-delay: 100ms;
+  }
+  
+  .delay-2 {
+    animation-delay: 200ms;
+  }
+  
+  .delay-3 {
+    animation-delay: 300ms;
+  }
+  
+  .delay-4 {
+    animation-delay: 400ms;
+  }
+  
+  .delay-5 {
+    animation-delay: 500ms;
+  }
+  
+  .delay-6 {
+    animation-delay: 600ms;
+  }
+  
+  .delay-7 {
+    animation-delay: 700ms;
+  }
+  
+  .delay-8 {
+    animation-delay: 800ms;
+  }
+  
+  .loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: loader 0.01s 1.75s both;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loader__item-container {
+    display: flex;
+    width: 5rem;
+    justify-content: space-between;
+  }
+  .loader__item {
+    color: #99e2d0;
+    animation: rotate 1s 1;
+  }
+  
+  .fill {
+    color: black;
+    cursor: pointer;
+  }
+  .fill:hover {
+    animation: fill 0.3s ease-in-out;
+    display: inline-block;
+    opacity: 1;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+  .btn a {
+    color: #fff;
+  }
+  .btn button {
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 10% 25%;
+    width: 50%;
+  }
+  .btn button:hover {
+    box-shadow: 0.25rem 0.25rem 10px 10px rgba(0, 0, 0, 0.5);
+  }
+  .btn--gradien button {
+    color: #fff;
+    background: linear-gradient(#ff79da, #9356dc);
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 0 25%;
+    width: 50%;
+    box-shadow: 0 15px 0 -11px #d9d9d9;
+  }
+  .btn--gradien button:hover {
+    background: linear-gradient(#fc89db, #9866d4);
+  }
+  .btn--large button {
+    margin: 10% 25%;
+  }
+  
+  .acceuil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f2f2f2;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .acceuil__input {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+  }
+  .acceuil_input input {
+    width: 150px;
+    border: unset;
+    background-color: unset;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  .acceuil_input input:focus {
+    border: 1px black solid;
+    outline: none;
+    background-color: #f2f2f2;
+  }
+  .acceuil_input input: placeholder {
+    color: black;
+    opacity: 1;
+  }
+  
+  .acceuil_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 270px;
+    text-align: center;
+  }
+  .acceuil_text p {
+    margin-top: -10px;
+  }
+  
+  .section1 {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .guide {
+    padding: 2rem 1rem;
+  }
+  .guide__title {
+    margin-top: 0;
+  }
+  .guide__etapes {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+  }
+  @media (min-width: 1024px) {
+    .guide__etapes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0;
+      margin-left: 2rem;
+    }
+  }
+  .guide__etapes .guide__etape {
+    padding: 1.5rem;
+    margin: 1rem 0 1rem 0.75rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    display: flex;
+    position: relative;
+  }
+  .guide__etapes .guide__etape:first-child {
+    margin-top: 0;
+  }
+  @media (min-width: 1024px) {
+    .guide__etapes .guide__etape:first-child {
+      margin-top: 16px;
+    }
+  }
+  .guide__etapes .guide__etape:nth-child(3) {
+    background-color: #ece1f9;
+  }
+  .guide__etapes .guide__etape:nth-child(3) i {
+    color: #9356dc;
+  }
+  .guide__etapes .guide__etape::before {
+    background: #9356dc;
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    height: 24px;
+    width: 24px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: -8px;
+  }
+  .guide__etapes .guide__etape .guide__icon {
+    color: #9c9c9c;
+    margin-right: 10px;
+  }
+  
+  .restaurants {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px 20px 50px 20px;
+    box-sizing: border-box;
+  }
+  
+  .restaurant {
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+    margin-bottom: 50px;
+  }
+  .restaurant__img {
+    height: 200px;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+  }
+  @media (min-width: 1024px) {
+    .restaurant__img {
+      height: 400px;
+    }
+  }
+  .restaurant__badge {
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+  .restaurant__description {
+    padding: 0 10px;
+    height: 90px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restaurant__content {
+    flex: 1;
+  }
+  .restaurant__title {
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+  .restaurant__subtitle {
+    margin: 0;
+  }
+  
