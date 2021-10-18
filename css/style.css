@@ -39,12 +39,13 @@ body {
     max-width: 1280px;
     margin: auto;
     position: relative;
+    align-items: flex-start;
   }
   
   h1 {
     font-size: 2.4em;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
   
   .header {
@@ -58,7 +59,7 @@ body {
   }
   .header_logo {
     font-family: 'Shrikhand';
-    margin: 20px;
+    margin: 10px;
     text-align: center;
   }
   .header__arrow {
@@ -314,7 +315,7 @@ body {
     margin: 10% 25%;
   }
   
-  .acceuil {
+  .accueil {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -323,7 +324,7 @@ body {
     box-sizing: border-box;
   }
   
-  .acceuil__input {
+  .accueil__input {
     background-color: #eaeaea;
     width: 100%;
     height: 60px;
@@ -335,32 +336,32 @@ body {
     box-sizing: border-box;
     padding-top: 20px;
   }
-  .acceuil_input input {
+  .accueil_input input {
     width: 150px;
     border: unset;
     background-color: unset;
     font-weight: bold;
     margin-left: 10px;
   }
-  .acceuil_input input:focus {
+  .accueil_input input:focus {
     border: 1px black solid;
     outline: none;
     background-color: #f2f2f2;
   }
-  .acceuil_input input: placeholder {
+  .accueil_input input: placeholder {
     color: black;
     opacity: 1;
   }
   
-  .acceuil_text {
+  .accueil_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    height: 270px;
+    height: 200px;
     text-align: center;
   }
-  .acceuil_text p {
+  .accueil_text p {
     margin-top: -10px;
   }
   
@@ -374,6 +375,7 @@ body {
   }
   .guide__title {
     margin-top: 0;
+    justify-content: flex-start;
   }
   .guide__etapes {
     margin: 0;
